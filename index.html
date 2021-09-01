@@ -24,13 +24,24 @@
         </div>
     </header>
     <main>
-        <section>
+        <section class="mb-5">
             <!-- search box  -->
             <div class="input-group mb-3 w-75 mx-auto">
                 <!-- input-field  -->
                 <input type="text" class="form-control py-3" id="inputField" placeholder="Enter your favourite book name**" aria-label="Recipient's username"
                     aria-describedby="button-addon2">
                 <button class="btn fw-bold bg-warning text-dark" type="button" id="searchButton">Search</button>
+            </div>
+
+            <div>
+                <p class="text-center d-none" id="input-div">No result found</p>
+                
+            </div>
+        </section>
+        <!-- card section  -->
+        <section>
+            <div class="row row-cols-1 row-cols-md-3 g-4 text-dark" id="card-div">
+               
             </div>
         </section>
     </main>
