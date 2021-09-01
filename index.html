@@ -24,7 +24,7 @@
         </div>
     </header>
     <main>
-        <section class="mb-5">
+        <section class="mb-5 d-flex flex-column align-items-center">
             <!-- search box  -->
             <div class="input-group mb-3 w-75 mx-auto">
                 <!-- input-field  -->
@@ -32,10 +32,17 @@
                     aria-describedby="button-addon2">
                 <button class="btn fw-bold bg-warning text-dark" type="button" id="searchButton">Search</button>
             </div>
+            <!-- spinner  -->
+            <div class="spinner-grow text-warning d-none" role="status" id="spinner">
+                <span class="visually-hidden">Loading...</span>
+            </div>
 
-            <div>
-                <p class="text-center d-none" id="input-div">No result found</p>
-                
+            <!-- error text  -->
+            <div >
+                <p class="text-center d-none" id="error">No result found</p>
+                <div id="input-div">
+
+                </div>
             </div>
         </section>
         <!-- card section  -->

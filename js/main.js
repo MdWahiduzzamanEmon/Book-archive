@@ -1,5 +1,8 @@
 const cardDiv = document.getElementById("card-div");
 const inputDiv = document.getElementById("input-div");
+const spinner = document.getElementById("spinner");
+const error = document.getElementById("error");
+
 
 const searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", () => {
@@ -8,21 +11,32 @@ searchButton.addEventListener("click", () => {
   
     // pass input value 
     const url = ` http://openlibrary.org/search.json?q=${inputFieldValue}`;
+    spinner.classList.remove("d-none");
     fetch(url)
         .then(res => res.json())
-        .then(data => getData(data.docs))
+        .then(data => {
+           setTimeout(() => {
+               spinner.classList.add("d-none");
+            //    function call 
+               getData(data.docs);
+               
+      }, 500);
+      })
         .finally(inputField.value = "");
     cardDiv.textContent = "";
     
 })
 
 const getData = books => {
+    console.log(books.length);
     if (books.length === 0) {
-        inputDiv.classList.remove("d-none");
-        
-        } else if(books.length){
-            inputDiv.innerHTML=`Found total ${books.length} books`
-       
+        error.classList.remove("d-none");
+        inputDiv.innerHTML="";
+
+    }
+    if (books.length) {
+        inputDiv.innerHTML = `<p>Found total ${books.length} books</p>`;
+        error.classList.add("d-none");
         }
     
     
