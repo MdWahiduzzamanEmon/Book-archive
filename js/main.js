@@ -53,9 +53,9 @@ const getData = books => {
                         <div class="card-body">
                             <h5 class="card-title">
                             <p class="border border-dark p-4"><span class="fw-bold"></span>Book Name:</span>${book.title}</p>
-                            <p class="border border-dark p-4"><span>Author Name:</span>NO record found</p>
-                            <p class="border border-dark p-4"><span>Publisher:</span>NO record found</p>
-                            <p class="border border-dark p-4"><span>First Publish:</span>NO record found</p>
+                            <p class="border border-dark p-4 text-danger"><span>Author Name:</span>NO record found</p>
+                            <p class="border border-dark p-4 text-danger"><span>Publisher:</span>NO record found</p>
+                            <p class="border border-dark p-4 text-danger"><span>First Publish:</span>NO record found</p>
                             </h5>
                            
                         </div>
