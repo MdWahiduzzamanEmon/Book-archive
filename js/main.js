@@ -10,7 +10,7 @@ searchButton.addEventListener("click", () => {
     const inputFieldValue = inputField.value;
   
     // pass input value 
-    const url = ` http://openlibrary.org/search.json?q=${inputFieldValue}`;
+    const url = ` https://openlibrary.org/search.json?q=${inputFieldValue}`;
     spinner.classList.remove("d-none");
     fetch(url)
         .then(res => res.json())
